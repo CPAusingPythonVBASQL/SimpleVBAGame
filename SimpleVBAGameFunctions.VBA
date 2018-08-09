@@ -24,7 +24,7 @@ Call RunEveryOneMinutes
 Dim CellRand As Range
 Dim MyClass As New BoardAssets
 Application.ScreenUpdating = False
-MyClass.InitializeWithValues 30, 20
+            MyClass.InitializeWithValues 30, 20 'This will change the size of the game board by Row, Column. Can be changes while actively running
 MyClass.GenerateGameBoard
 
 Set CellRand = MyClass.BoardRange.EntireRow.Cells(MyClass.RandomRow, MyClass.RandomCol)
