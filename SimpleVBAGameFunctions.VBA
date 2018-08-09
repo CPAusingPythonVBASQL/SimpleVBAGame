@@ -12,11 +12,13 @@ Private Sub Timer()
         Application.OnTime Now() + TimeValue("00:00:03"), "Timer"
     End If
 End Sub
+
 Function RunEveryOneMinutes()
 Dim ActiveCellRange As Range
 Set ActiveCellRange = ActiveCell
 Set RunEveryOneMinutes = ActiveCellRange
 End Function
+
 Sub RunEveryTwoMinutes()
 Call RunEveryOneMinutes
 Dim CellRand As Range
@@ -40,7 +42,6 @@ With ActiveWorkbook.ActiveSheet
         Application.OnTime Now + TimeValue("00:00:01"), "RunEveryTwoMinutes"
     Next Cell
 End With
-
 'To add a score keeper and a time limit
 End Sub
 
